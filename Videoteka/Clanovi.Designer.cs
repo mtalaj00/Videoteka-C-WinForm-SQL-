@@ -37,10 +37,10 @@
             this.labelIme = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.labelID = new System.Windows.Forms.Label();
-            this.buttonClanovi = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonKreiraj = new System.Windows.Forms.Button();
+            this.buttonIzmjeni = new System.Windows.Forms.Button();
+            this.buttonPrikazi = new System.Windows.Forms.Button();
+            this.buttonIzbrisi = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxOIB = new System.Windows.Forms.TextBox();
             this.labelOIB = new System.Windows.Forms.Label();
@@ -94,7 +94,6 @@
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(206, 27);
             this.textBoxID.TabIndex = 9;
-           
             // 
             // labelID
             // 
@@ -108,51 +107,51 @@
             this.labelID.TabIndex = 8;
             this.labelID.Text = "ID";
             // 
-            // buttonClanovi
+            // buttonKreiraj
             // 
-            this.buttonClanovi.BackColor = System.Drawing.Color.White;
-            this.buttonClanovi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonClanovi.Location = new System.Drawing.Point(58, 231);
-            this.buttonClanovi.Name = "buttonClanovi";
-            this.buttonClanovi.Size = new System.Drawing.Size(126, 36);
-            this.buttonClanovi.TabIndex = 12;
-            this.buttonClanovi.Text = "Kreiraj";
-            this.buttonClanovi.UseVisualStyleBackColor = false;
-            this.buttonClanovi.Click += new System.EventHandler(this.buttonClanovi_Click);
+            this.buttonKreiraj.BackColor = System.Drawing.Color.White;
+            this.buttonKreiraj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonKreiraj.Location = new System.Drawing.Point(58, 231);
+            this.buttonKreiraj.Name = "buttonKreiraj";
+            this.buttonKreiraj.Size = new System.Drawing.Size(126, 36);
+            this.buttonKreiraj.TabIndex = 12;
+            this.buttonKreiraj.Text = "Kreiraj";
+            this.buttonKreiraj.UseVisualStyleBackColor = false;
+            this.buttonKreiraj.Click += new System.EventHandler(this.buttonKreiraj_Click);
             // 
-            // button1
+            // buttonIzmjeni
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(236, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 36);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Izmijeni";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonIzmjeni.BackColor = System.Drawing.Color.White;
+            this.buttonIzmjeni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonIzmjeni.Location = new System.Drawing.Point(236, 231);
+            this.buttonIzmjeni.Name = "buttonIzmjeni";
+            this.buttonIzmjeni.Size = new System.Drawing.Size(126, 36);
+            this.buttonIzmjeni.TabIndex = 13;
+            this.buttonIzmjeni.Text = "Izmijeni";
+            this.buttonIzmjeni.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonPrikazi
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(407, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 36);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Prikaži";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonPrikazi.BackColor = System.Drawing.Color.White;
+            this.buttonPrikazi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPrikazi.Location = new System.Drawing.Point(407, 231);
+            this.buttonPrikazi.Name = "buttonPrikazi";
+            this.buttonPrikazi.Size = new System.Drawing.Size(126, 36);
+            this.buttonPrikazi.TabIndex = 14;
+            this.buttonPrikazi.Text = "Prikaži";
+            this.buttonPrikazi.UseVisualStyleBackColor = false;
+            this.buttonPrikazi.Click += new System.EventHandler(this.buttonPrikazi_Click);
             // 
-            // button3
+            // buttonIzbrisi
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(593, 231);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 36);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Izbriši";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonIzbrisi.BackColor = System.Drawing.Color.White;
+            this.buttonIzbrisi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonIzbrisi.Location = new System.Drawing.Point(593, 231);
+            this.buttonIzbrisi.Name = "buttonIzbrisi";
+            this.buttonIzbrisi.Size = new System.Drawing.Size(126, 36);
+            this.buttonIzbrisi.TabIndex = 15;
+            this.buttonIzbrisi.Text = "Izbriši";
+            this.buttonIzbrisi.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -212,10 +211,10 @@
             this.Controls.Add(this.textBoxOIB);
             this.Controls.Add(this.labelOIB);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonClanovi);
+            this.Controls.Add(this.buttonIzbrisi);
+            this.Controls.Add(this.buttonPrikazi);
+            this.Controls.Add(this.buttonIzmjeni);
+            this.Controls.Add(this.buttonKreiraj);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.textBoxPrezime);
@@ -239,10 +238,10 @@
         private System.Windows.Forms.Label labelIme;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.Button buttonClanovi;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonKreiraj;
+        private System.Windows.Forms.Button buttonIzmjeni;
+        private System.Windows.Forms.Button buttonPrikazi;
+        private System.Windows.Forms.Button buttonIzbrisi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxOIB;
         private System.Windows.Forms.Label labelOIB;

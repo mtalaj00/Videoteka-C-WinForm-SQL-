@@ -28,7 +28,7 @@ namespace Videoteka
         }
 
         // Prikazi
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonPrikazi_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=Videoteka;Integrated Security=True");
             connection.Open();
@@ -190,12 +190,9 @@ namespace Videoteka
 
 
         // Kreiraj
-        private void buttonClanovi_Click(object sender, EventArgs e)
+        private void buttonKreiraj_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=Videoteka;Integrated Security=True");
-            connection.Open();
-                       
-
+    
             // AKO JE JEDNO POLJE PRAZNO NECE IZVRSITI UNOS U BAZU PODATAKA (POLJE ID TREBA OSTATI PRAZNO JER SE U BAZI SAMO INKREMENTIRA)
             if(String.IsNullOrEmpty(textBoxIme.Text) || String.IsNullOrEmpty(textBoxPrezime.Text) || String.IsNullOrEmpty(textBoxOIB.Text))
             {
@@ -209,44 +206,14 @@ namespace Videoteka
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Osoba VALUES (@ime, @prezime, @oib)", connection);
-
-                    cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                    cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-                    cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-
-                    cmd.ExecuteNonQuery();
-
-                    cmd = new SqlCommand("SELECT Osoba.OsobaID FROM Osoba WHERE Osoba.OIB = @oib", connection);
-                    cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    dr.Read();
-
-                    int d = dr.GetInt32(0);
-
-                    dr.Close();
-
-                    cmd = new SqlCommand("INSERT INTO Clan VALUES (@idOsoba, 1)", connection);
-                    cmd.Parameters.AddWithValue("@idOsoba", d);
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Uspješno ste dodali novog člana.");
-
+                    KreirajNovogClana kreirajNovogClana = new KreirajNovogClana(textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
 
                     textBoxID.Text = "";
                     textBoxIme.Text = "";
                     textBoxPrezime.Text = "";
                     textBoxOIB.Text = "";
-                }                   
-                    
-            }
-            connection.Close();
-
-
-
+                }                                       
+            }   
         }
-
     }
 }
