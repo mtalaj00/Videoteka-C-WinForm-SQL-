@@ -30,164 +30,15 @@ namespace Videoteka
         // Prikazi
         private void buttonPrikazi_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=Videoteka;Integrated Security=True");
-            connection.Open();
-
-            DataTable table = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter();
-
-            SqlCommand cmd = new SqlCommand();
-
-            //  ISPIS SVIH CLANOVA AKO NEMA UNESENIH PODATAKA
-            if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
+            if (String.IsNullOrEmpty(textBoxID.Text))
             {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID", connection);                 
+                IspisClanova ispisClanova = new IspisClanova(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text, this.dataGridViewClanovi);
             }
-
-            //  ISPIS PREMA ID-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
+            else
             {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id", connection);
-
-                cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
+                IspisClanova ispisClanova = new IspisClanova(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text, this.dataGridViewClanovi);
             }
-
-            //  ISPIS PREMA IMENU
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.Ime = @ime", connection);
-
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-            }
-
-            //  ISPIS PREMA PREZIMENU
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text))
-            {               
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.Prezime = @prezime", connection);
-
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-            }
-
-            //  ISPIS PREMA OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA IMENU I PREZIMENU
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text))
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.Ime = @ime AND Osoba.Prezime = @prezime", connection);
-
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-            }
-
-            //  ISPIS PREMA IMENU I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.Prezime = @prezime AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA PREZIMENU I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.Ime = @ime AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA ID-u I IMENU
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.Ime = @ime", connection);
-
-                cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);               
-            }
-
-            //  ISPIS PREMA ID-u I PREZIMENU
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text))
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.Prezime = @prezime", connection);
-
-                cmd.Parameters.AddWithValue("id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-            }
-
-            //  ISPIS PREMA ID-u I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA ID-u, IMENU I PREZIMENU
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text))
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.Ime = @ime AND Osoba.Prezime = @prezime", connection);
-
-                cmd.Parameters.AddWithValue("id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-            }
-
-            //  ISPIS PREMA ID-u, IMENU I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.Ime = @ime AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA ID-u, PREZIMENU I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.Prezime = @prezime AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA IMENU, PREZIMENU I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.Ime = @ime AND Osoba.Prezime = @prezime AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            //  ISPIS PREMA ID-u, IMENU, PREZIMENU I OIB-u
-            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) == false && String.IsNullOrEmpty(textBoxPrezime.Text) == false && String.IsNullOrEmpty(textBoxOIB.Text) == false)
-            {
-                cmd = new SqlCommand("SELECT Clan.ClanID, Osoba.Ime, Osoba.Prezime, Osoba.OIB FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Clan.ClanID = @id AND Osoba.Ime = @ime AND Osoba.Prezime = @prezime AND Osoba.OIB = @oib", connection);
-
-                cmd.Parameters.AddWithValue("id", int.Parse(textBoxID.Text));
-                cmd.Parameters.AddWithValue("@ime", textBoxIme.Text);
-                cmd.Parameters.AddWithValue("@prezime", textBoxPrezime.Text);
-                cmd.Parameters.AddWithValue("@oib", textBoxOIB.Text);
-            }
-
-            adapter.SelectCommand = cmd;
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
-            connection.Close();
         }
-
-
 
         // Kreiraj
         private void buttonKreiraj_Click(object sender, EventArgs e)
@@ -214,6 +65,21 @@ namespace Videoteka
                     textBoxOIB.Text = "";
                 }                                       
             }   
+        }
+
+        
+
+        private void dataGridViewClanovi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != -1)
+            {
+                DataGridViewRow dataGridViewRow = dataGridViewClanovi.Rows[e.RowIndex];
+
+                textBoxID.Text = dataGridViewRow.Cells[0].Value.ToString();
+                textBoxIme.Text = dataGridViewRow.Cells[1].Value.ToString();
+                textBoxPrezime.Text = dataGridViewRow.Cells[2].Value.ToString();
+                textBoxOIB.Text = dataGridViewRow.Cells[3].Value.ToString();
+            }
         }
     }
 }

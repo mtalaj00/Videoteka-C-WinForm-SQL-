@@ -55,6 +55,9 @@
     <Compile Include="Clanovi.Designer.cs">
       <DependentUpon>Clanovi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clan_class.cs" />
+    <Compile Include="IspisClanova.cs" />
+    <Compile Include="IzbrisiClana.cs" />
     <Compile Include="KreirajNovogClana.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -68,6 +71,7 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Osoba.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clanovi.resx">
