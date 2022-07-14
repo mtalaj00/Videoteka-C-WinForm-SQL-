@@ -57,6 +57,7 @@
             this.buttonFilmovi.TabIndex = 1;
             this.buttonFilmovi.Text = "Filmovi";
             this.buttonFilmovi.UseVisualStyleBackColor = false;
+            this.buttonFilmovi.Click += new System.EventHandler(this.buttonFilmovi_Click);
             // 
             // buttonGlumci
             // 

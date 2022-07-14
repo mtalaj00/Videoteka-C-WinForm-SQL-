@@ -25,6 +25,8 @@ namespace Videoteka
             labelIme.BackColor = System.Drawing.Color.Transparent;
             labelPrezime.BackColor = System.Drawing.Color.Transparent;
             labelOIB.BackColor = System.Drawing.Color.Transparent;
+
+            pictureBoxNazad.BackColor = System.Drawing.Color.Transparent;
         }
 
         // Prikazi
@@ -80,6 +82,7 @@ namespace Videoteka
             }
         }
 
+        // Izbrisi
         private void buttonIzbrisi_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
@@ -106,6 +109,7 @@ namespace Videoteka
             buttonPrikazi_Click(sender, e);
         }
 
+        // Izmjeni
         private void buttonIzmjeni_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(textBoxID.Text))
@@ -118,7 +122,7 @@ namespace Videoteka
             }
             else
             {
-                IzmjeniPodatke izmjeniPodatke = new IzmjeniPodatke(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                IzmjeniClana izmjeniPodatke = new IzmjeniClana(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
                 textBoxID.Text = "";
                 textBoxIme.Text = "";
                 textBoxPrezime.Text = "";
@@ -126,6 +130,23 @@ namespace Videoteka
                 buttonPrikazi_Click(sender, e);
             }
             
+        }
+
+        private void pictureBoxNazad_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            this.Hide();
+            menu.Show();
+        }
+
+        private void pictureBoxNazad_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxNazad.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBoxNazad_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxNazad.Cursor = Cursors.Default;
         }
     }
 }

@@ -44,13 +44,15 @@
             this.dataGridViewClanovi = new System.Windows.Forms.DataGridView();
             this.textBoxOIB = new System.Windows.Forms.TextBox();
             this.labelOIB = new System.Windows.Forms.Label();
+            this.pictureBoxNazad = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClanovi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNazad)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPrezime
             // 
             this.textBoxPrezime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxPrezime.Location = new System.Drawing.Point(342, 141);
+            this.textBoxPrezime.Location = new System.Drawing.Point(353, 137);
             this.textBoxPrezime.Name = "textBoxPrezime";
             this.textBoxPrezime.Size = new System.Drawing.Size(206, 27);
             this.textBoxPrezime.TabIndex = 7;
@@ -61,7 +63,7 @@
             this.labelPrezime.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelPrezime.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrezime.ForeColor = System.Drawing.Color.White;
-            this.labelPrezime.Location = new System.Drawing.Point(181, 141);
+            this.labelPrezime.Location = new System.Drawing.Point(229, 141);
             this.labelPrezime.Name = "labelPrezime";
             this.labelPrezime.Size = new System.Drawing.Size(83, 23);
             this.labelPrezime.TabIndex = 6;
@@ -70,7 +72,7 @@
             // textBoxIme
             // 
             this.textBoxIme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxIme.Location = new System.Drawing.Point(342, 92);
+            this.textBoxIme.Location = new System.Drawing.Point(353, 88);
             this.textBoxIme.Name = "textBoxIme";
             this.textBoxIme.Size = new System.Drawing.Size(206, 27);
             this.textBoxIme.TabIndex = 5;
@@ -81,7 +83,7 @@
             this.labelIme.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelIme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIme.ForeColor = System.Drawing.Color.White;
-            this.labelIme.Location = new System.Drawing.Point(181, 92);
+            this.labelIme.Location = new System.Drawing.Point(229, 92);
             this.labelIme.Name = "labelIme";
             this.labelIme.Size = new System.Drawing.Size(45, 23);
             this.labelIme.TabIndex = 4;
@@ -90,7 +92,7 @@
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxID.Location = new System.Drawing.Point(342, 38);
+            this.textBoxID.Location = new System.Drawing.Point(353, 34);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(206, 27);
             this.textBoxID.TabIndex = 9;
@@ -101,7 +103,7 @@
             this.labelID.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelID.ForeColor = System.Drawing.Color.White;
-            this.labelID.Location = new System.Drawing.Point(181, 38);
+            this.labelID.Location = new System.Drawing.Point(229, 38);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(28, 23);
             this.labelID.TabIndex = 8;
@@ -111,7 +113,7 @@
             // 
             this.buttonKreiraj.BackColor = System.Drawing.Color.White;
             this.buttonKreiraj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonKreiraj.Location = new System.Drawing.Point(58, 231);
+            this.buttonKreiraj.Location = new System.Drawing.Point(65, 231);
             this.buttonKreiraj.Name = "buttonKreiraj";
             this.buttonKreiraj.Size = new System.Drawing.Size(126, 36);
             this.buttonKreiraj.TabIndex = 12;
@@ -123,7 +125,7 @@
             // 
             this.buttonIzmjeni.BackColor = System.Drawing.Color.White;
             this.buttonIzmjeni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonIzmjeni.Location = new System.Drawing.Point(236, 231);
+            this.buttonIzmjeni.Location = new System.Drawing.Point(245, 231);
             this.buttonIzmjeni.Name = "buttonIzmjeni";
             this.buttonIzmjeni.Size = new System.Drawing.Size(126, 36);
             this.buttonIzmjeni.TabIndex = 13;
@@ -135,7 +137,7 @@
             // 
             this.buttonPrikazi.BackColor = System.Drawing.Color.White;
             this.buttonPrikazi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPrikazi.Location = new System.Drawing.Point(407, 231);
+            this.buttonPrikazi.Location = new System.Drawing.Point(422, 231);
             this.buttonPrikazi.Name = "buttonPrikazi";
             this.buttonPrikazi.Size = new System.Drawing.Size(126, 36);
             this.buttonPrikazi.TabIndex = 14;
@@ -147,7 +149,7 @@
             // 
             this.buttonIzbrisi.BackColor = System.Drawing.Color.White;
             this.buttonIzbrisi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonIzbrisi.Location = new System.Drawing.Point(593, 231);
+            this.buttonIzbrisi.Location = new System.Drawing.Point(599, 231);
             this.buttonIzbrisi.Name = "buttonIzbrisi";
             this.buttonIzbrisi.Size = new System.Drawing.Size(126, 36);
             this.buttonIzbrisi.TabIndex = 15;
@@ -178,18 +180,18 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewClanovi.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewClanovi.Location = new System.Drawing.Point(58, 316);
+            this.dataGridViewClanovi.Location = new System.Drawing.Point(65, 298);
             this.dataGridViewClanovi.Name = "dataGridViewClanovi";
             this.dataGridViewClanovi.ReadOnly = true;
             this.dataGridViewClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewClanovi.Size = new System.Drawing.Size(661, 192);
+            this.dataGridViewClanovi.Size = new System.Drawing.Size(660, 192);
             this.dataGridViewClanovi.TabIndex = 16;
             this.dataGridViewClanovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClanovi_CellClick);
             // 
             // textBoxOIB
             // 
             this.textBoxOIB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxOIB.Location = new System.Drawing.Point(342, 187);
+            this.textBoxOIB.Location = new System.Drawing.Point(353, 183);
             this.textBoxOIB.Name = "textBoxOIB";
             this.textBoxOIB.Size = new System.Drawing.Size(206, 27);
             this.textBoxOIB.TabIndex = 18;
@@ -200,11 +202,24 @@
             this.labelOIB.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelOIB.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOIB.ForeColor = System.Drawing.Color.White;
-            this.labelOIB.Location = new System.Drawing.Point(181, 187);
+            this.labelOIB.Location = new System.Drawing.Point(229, 187);
             this.labelOIB.Name = "labelOIB";
             this.labelOIB.Size = new System.Drawing.Size(42, 23);
             this.labelOIB.TabIndex = 17;
             this.labelOIB.Text = "OIB";
+            // 
+            // pictureBoxNazad
+            // 
+            this.pictureBoxNazad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNazad.BackgroundImage")));
+            this.pictureBoxNazad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxNazad.Location = new System.Drawing.Point(370, 504);
+            this.pictureBoxNazad.Name = "pictureBoxNazad";
+            this.pictureBoxNazad.Size = new System.Drawing.Size(60, 45);
+            this.pictureBoxNazad.TabIndex = 19;
+            this.pictureBoxNazad.TabStop = false;
+            this.pictureBoxNazad.Click += new System.EventHandler(this.pictureBoxNazad_Click);
+            this.pictureBoxNazad.MouseLeave += new System.EventHandler(this.pictureBoxNazad_MouseLeave);
+            this.pictureBoxNazad.MouseHover += new System.EventHandler(this.pictureBoxNazad_MouseHover);
             // 
             // Clanovi
             // 
@@ -213,6 +228,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.pictureBoxNazad);
             this.Controls.Add(this.textBoxOIB);
             this.Controls.Add(this.labelOIB);
             this.Controls.Add(this.dataGridViewClanovi);
@@ -226,11 +242,13 @@
             this.Controls.Add(this.labelPrezime);
             this.Controls.Add(this.textBoxIme);
             this.Controls.Add(this.labelIme);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Clanovi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Članovi";
             this.Load += new System.EventHandler(this.Clanovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClanovi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNazad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +268,6 @@
         private System.Windows.Forms.DataGridView dataGridViewClanovi;
         private System.Windows.Forms.TextBox textBoxOIB;
         private System.Windows.Forms.Label labelOIB;
+        private System.Windows.Forms.PictureBox pictureBoxNazad;
     }
 }

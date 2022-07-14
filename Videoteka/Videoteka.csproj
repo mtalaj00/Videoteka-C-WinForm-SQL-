@@ -46,19 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clan.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Clanovi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Clanovi.Designer.cs">
       <DependentUpon>Clanovi.cs</DependentUpon>
     </Compile>
-    <Compile Include="IspisClanova.cs" />
-    <Compile Include="IzbrisiClana.cs" />
-    <Compile Include="IzmjeniPodatke.cs" />
-    <Compile Include="KreirajNovogClana.cs" />
+    <Compile Include="Film.cs" />
+    <Compile Include="Filmovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filmovi.Designer.cs">
+      <DependentUpon>Filmovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clanovi\IspisClanova.cs" />
+    <Compile Include="Clanovi\IzbrisiClana.cs" />
+    <Compile Include="Clanovi\IzmjeniClana.cs" />
+    <Compile Include="Clanovi\KreirajNovogClana.cs" />
+    <Compile Include="IspisFilmova.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clanovi.resx">
       <DependentUpon>Clanovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filmovi.resx">
+      <DependentUpon>Filmovi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -107,5 +115,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

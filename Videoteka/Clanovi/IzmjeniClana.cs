@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Videoteka
 {
-    class IzmjeniPodatke
+    class IzmjeniClana
     {
-        public IzmjeniPodatke (int ID, String Ime, String Prezime, String OIB)
+        public IzmjeniClana (int ID, String Ime, String Prezime, String OIB)
         {
             DataTable table = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter();

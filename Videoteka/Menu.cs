@@ -23,5 +23,12 @@ namespace Videoteka
             this.Hide();
             clanovi.Show();
         }
+
+        private void buttonFilmovi_Click(object sender, EventArgs e)
+        {
+            Filmovi filmovi = new Filmovi();
+            this.Hide();
+            filmovi.Show();
+        }
     }
 }

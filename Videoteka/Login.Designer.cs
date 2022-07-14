@@ -100,6 +100,7 @@
             this.Controls.Add(this.labelLozinka);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelIme);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Videoteka";
