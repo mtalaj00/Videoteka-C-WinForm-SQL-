@@ -129,6 +129,7 @@
             this.buttonIzmjeni.TabIndex = 13;
             this.buttonIzmjeni.Text = "Izmijeni";
             this.buttonIzmjeni.UseVisualStyleBackColor = false;
+            this.buttonIzmjeni.Click += new System.EventHandler(this.buttonIzmjeni_Click);
             // 
             // buttonPrikazi
             // 

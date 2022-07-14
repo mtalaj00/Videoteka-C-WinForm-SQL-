@@ -105,5 +105,27 @@ namespace Videoteka
 
             buttonPrikazi_Click(sender, e);
         }
+
+        private void buttonIzmjeni_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxID.Text))
+            {
+                MessageBox.Show("Molimo vas da unesete ID!");
+            }
+            else if (String.IsNullOrEmpty(textBoxID.Text) == false && String.IsNullOrEmpty(textBoxIme.Text) && String.IsNullOrEmpty(textBoxPrezime.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
+            {
+                MessageBox.Show("Molimo vas da unesete neki podatak koji želite izmjeniti.");
+            }
+            else
+            {
+                IzmjeniPodatke izmjeniPodatke = new IzmjeniPodatke(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                textBoxID.Text = "";
+                textBoxIme.Text = "";
+                textBoxPrezime.Text = "";
+                textBoxOIB.Text = "";
+                buttonPrikazi_Click(sender, e);
+            }
+            
+        }
     }
 }

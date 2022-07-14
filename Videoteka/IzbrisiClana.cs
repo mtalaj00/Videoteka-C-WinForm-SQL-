@@ -31,12 +31,19 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
+                    if (result == DialogResult.Yes)
+                    {
 
-                    MessageBox.Show("Član obrisan.");
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Član obrisan.");
+                    }                    
+             
                 }
                 else
                 {
@@ -56,11 +63,17 @@ namespace Videoteka
                
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    }
                 }
                 else
                 {
@@ -80,11 +93,17 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    }
                 }
                 else
                 {
@@ -104,11 +123,17 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    }
                 }
                 else
                 {
@@ -129,11 +154,17 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    }
                 }
                 else
                 {
@@ -154,11 +185,17 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    }
                 }
                 else
                 {
@@ -179,11 +216,17 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    }
                 }
                 else
                 {
@@ -201,20 +244,26 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
-                    cmd.Parameters.AddWithValue("@oib", OIB);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    dr.Read();
+                    if (result == DialogResult.Yes)
+                    {
 
-                    int id = dr.GetInt32(0);
+                        cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
+                        cmd.Parameters.AddWithValue("@oib", OIB);
 
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", id);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        dr.Read();
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
-                    dr.Close();
+                        int id = dr.GetInt32(0);
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", id);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                        dr.Close();
+                    }
                 }
                 else
                 {
@@ -234,20 +283,26 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
-                    cmd.Parameters.AddWithValue("@oib", OIB);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    dr.Read();
+                    if (result == DialogResult.Yes)
+                    {
 
-                    int id = dr.GetInt32(0);
+                        cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
+                        cmd.Parameters.AddWithValue("@oib", OIB);
 
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", id);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        dr.Read();
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
-                    dr.Close();
+                        int id = dr.GetInt32(0);
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", id);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                        dr.Close();
+                    }
                 }
                 else
                 {
@@ -267,20 +322,26 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
-                    cmd.Parameters.AddWithValue("@oib", OIB);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    dr.Read();
+                    if (result == DialogResult.Yes)
+                    {
 
-                    int id = dr.GetInt32(0);
+                        cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
+                        cmd.Parameters.AddWithValue("@oib", OIB);
 
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", id);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        dr.Read();
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
-                    dr.Close();
+                        int id = dr.GetInt32(0);
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", id);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                        dr.Close();
+                    }
                 }
                 else
                 {
@@ -301,20 +362,26 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                    cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
-                    cmd.Parameters.AddWithValue("@oib", OIB);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    dr.Read();
+                    if (result == DialogResult.Yes)
+                    {
 
-                    int id = dr.GetInt32(0);
+                        cmd = new SqlCommand("SELECT Clan.ClanID FROM Osoba INNER JOIN Clan ON Osoba.OsobaID = Clan.OsobaID WHERE Osoba.OIB = @oib", connection);
+                        cmd.Parameters.AddWithValue("@oib", OIB);
 
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", id);
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        dr.Read();
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
-                    dr.Close();
+                        int id = dr.GetInt32(0);
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", id);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                        dr.Close();
+                    }
                 }
                 else
                 {
@@ -336,13 +403,17 @@ namespace Videoteka
 
                 if (table.Rows.Count > 0)
                 {
-                  
-                    cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    DialogResult result = MessageBox.Show("Jeste li sigurni da želite ukloniti ovog člana ?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Član obrisan.");
-                    
+                    if (result == DialogResult.Yes)
+                    {
+
+                        cmd = new SqlCommand("DELETE FROM Clan WHERE Clan.ClanID = @id", connection);
+                        cmd.Parameters.AddWithValue("@id", ID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Član obrisan.");
+                    } 
                 }
                 else
                 {
