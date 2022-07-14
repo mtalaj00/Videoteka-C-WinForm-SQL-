@@ -95,5 +95,17 @@ namespace Videoteka
 
             buttonPrikazi_Click(sender, e);
         }
+
+        private void buttonIzmjeni_Click(object sender, EventArgs e)
+        {
+            AzurirajFilm azurirajFilm = new AzurirajFilm(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena);
+
+            textBoxID.Text = "";
+            textBoxNaziv.Text = "";
+            textBoxGodinaIzlaska.Text = "";
+            textBoxOcjena.Text = "";
+
+            buttonPrikazi_Click(sender, e);
+        }
     }
 }

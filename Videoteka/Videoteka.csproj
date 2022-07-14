@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AzurirajFilm.cs" />
     <Compile Include="Clanovi.cs">
       <SubType>Form</SubType>
     </Compile>
