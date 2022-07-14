@@ -64,6 +64,8 @@
     <Compile Include="Clanovi\IzmjeniClana.cs" />
     <Compile Include="Clanovi\KreirajNovogClana.cs" />
     <Compile Include="IspisFilmova.cs" />
+    <Compile Include="IzbrisiFilm.cs" />
+    <Compile Include="KreirajFilm.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -111,6 +111,7 @@
             this.dataGridViewFilmovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewFilmovi.Size = new System.Drawing.Size(660, 192);
             this.dataGridViewFilmovi.TabIndex = 30;
+            this.dataGridViewFilmovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFilmovi_CellClick);
             // 
             // buttonIzbrisi
             // 
@@ -122,6 +123,7 @@
             this.buttonIzbrisi.TabIndex = 29;
             this.buttonIzbrisi.Text = "Izbriši";
             this.buttonIzbrisi.UseVisualStyleBackColor = false;
+            this.buttonIzbrisi.Click += new System.EventHandler(this.buttonIzbrisi_Click);
             // 
             // buttonPrikazi
             // 

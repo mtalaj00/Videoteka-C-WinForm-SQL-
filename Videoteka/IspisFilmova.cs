@@ -13,7 +13,7 @@ namespace Videoteka
     {
         Film film = new Film();
 
-        public IspisFilmova(TextBox textBoxId, TextBox textBoxNaziv, TextBox textBoxGodinaIzlaska, TextBox textBoxOcjena, DataGridView dataGridView)
+        public IspisFilmova(TextBox textBoxId, TextBox textBoxNaziv, TextBox textBoxGodinaIzlaska, TextBox textBoxOcjena, DataGridView dataGridViewFIlm)
         {
             if (String.IsNullOrEmpty(textBoxId.Text))
             {
@@ -195,7 +195,7 @@ namespace Videoteka
                 adapter.SelectCommand = cmd;
                 adapter.Fill(table);
 
-                dataGridView.DataSource = table;
+                dataGridViewFIlm.DataSource = table;
 
                 connection.Close();
             }

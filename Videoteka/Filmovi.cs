@@ -17,9 +17,31 @@ namespace Videoteka
             InitializeComponent();
         }
 
+        // PRIKAZI FILM
         private void buttonPrikazi_Click(object sender, EventArgs e)
         {
             IspisFilmova ispisFilmova = new IspisFilmova(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena, dataGridViewFilmovi);            
+        }
+
+        // KREIRAJ FILM
+        private void buttonKreiraj_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxID.Text))
+            {
+                KreirajFilm kreirajFilm = new KreirajFilm(textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena);
+
+                textBoxID.Text = "";
+                textBoxNaziv.Text = "";
+                textBoxGodinaIzlaska.Text = "";
+                textBoxOcjena.Text = "";
+
+                buttonPrikazi_Click(sender,e);
+            }
+            else
+            {
+                MessageBox.Show("U polje ID nije potrebno unijeti podatke.");
+            }
+            
         }
 
         private void Filmovi_Load(object sender, EventArgs e)
@@ -49,9 +71,29 @@ namespace Videoteka
             pictureBoxNazad.Cursor = Cursors.Default;
         }
 
-        private void buttonKreiraj_Click(object sender, EventArgs e)
+        private void dataGridViewFilmovi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dataGridViewRow = dataGridViewFilmovi.Rows[e.RowIndex];
 
+                textBoxID.Text = dataGridViewRow.Cells[0].Value.ToString();
+                textBoxNaziv.Text = dataGridViewRow.Cells[1].Value.ToString();
+                textBoxGodinaIzlaska.Text = dataGridViewRow.Cells[2].Value.ToString();
+                textBoxOcjena.Text = dataGridViewRow.Cells[3].Value.ToString();
+            }
+        }
+
+        private void buttonIzbrisi_Click(object sender, EventArgs e)
+        {
+            IzbrisiFilm izbrisiFilm = new IzbrisiFilm(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena);
+
+            textBoxID.Text = "";
+            textBoxNaziv.Text = "";
+            textBoxGodinaIzlaska.Text = "";
+            textBoxOcjena.Text = "";
+
+            buttonPrikazi_Click(sender, e);
         }
     }
 }
