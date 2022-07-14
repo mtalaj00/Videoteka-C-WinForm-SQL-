@@ -152,6 +152,7 @@
             this.buttonIzbrisi.TabIndex = 15;
             this.buttonIzbrisi.Text = "Izbriši";
             this.buttonIzbrisi.UseVisualStyleBackColor = false;
+            this.buttonIzbrisi.Click += new System.EventHandler(this.buttonIzbrisi_Click);
             // 
             // dataGridViewClanovi
             // 
@@ -178,11 +179,11 @@
             this.dataGridViewClanovi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewClanovi.Location = new System.Drawing.Point(58, 316);
             this.dataGridViewClanovi.Name = "dataGridViewClanovi";
+            this.dataGridViewClanovi.ReadOnly = true;
             this.dataGridViewClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewClanovi.Size = new System.Drawing.Size(661, 192);
             this.dataGridViewClanovi.TabIndex = 16;
             this.dataGridViewClanovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClanovi_CellClick);
-          
             // 
             // textBoxOIB
             // 

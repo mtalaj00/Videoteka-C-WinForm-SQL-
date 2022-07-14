@@ -67,8 +67,6 @@ namespace Videoteka
             }   
         }
 
-        
-
         private void dataGridViewClanovi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex != -1)
@@ -80,6 +78,32 @@ namespace Videoteka
                 textBoxPrezime.Text = dataGridViewRow.Cells[2].Value.ToString();
                 textBoxOIB.Text = dataGridViewRow.Cells[3].Value.ToString();
             }
+        }
+
+        private void buttonIzbrisi_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxOIB.Text))
+            {
+                MessageBox.Show("Unijeli ste nedovoljno podataka! \n Za brisanje je potrebno znati ID ili OIB!");
+            }
+            else if(String.IsNullOrEmpty(textBoxID.Text) == false)
+            {
+                IzbrisiClana izbrisiClana = new IzbrisiClana(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                textBoxID.Text = "";
+                textBoxIme.Text = "";
+                textBoxPrezime.Text = "";
+                textBoxOIB.Text = "";
+            }
+            else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxOIB.Text) == false)
+            {
+                IzbrisiClana izbrisiClana = new IzbrisiClana(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                textBoxID.Text = "";
+                textBoxIme.Text = "";
+                textBoxPrezime.Text = "";
+                textBoxOIB.Text = "";
+            }
+
+            buttonPrikazi_Click(sender, e);
         }
     }
 }

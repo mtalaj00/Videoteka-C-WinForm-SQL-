@@ -178,9 +178,9 @@ namespace Videoteka
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(table);
-
-                // moran napraviti jos ispis na - dataGridViewClanovi.DataSource = table;
+            
                 dataGridView.DataSource = table;
+
                 connection.Close();
             }
             catch (Exception e)
