@@ -53,7 +53,7 @@
             // 
             this.pictureBoxNazad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNazad.BackgroundImage")));
             this.pictureBoxNazad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxNazad.Location = new System.Drawing.Point(367, 493);
+            this.pictureBoxNazad.Location = new System.Drawing.Point(367, 504);
             this.pictureBoxNazad.Name = "pictureBoxNazad";
             this.pictureBoxNazad.Size = new System.Drawing.Size(60, 45);
             this.pictureBoxNazad.TabIndex = 33;
@@ -64,21 +64,21 @@
             // 
             // textBoxOcjena
             // 
-            this.textBoxOcjena.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxOcjena.Location = new System.Drawing.Point(350, 172);
+            this.textBoxOcjena.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxOcjena.Location = new System.Drawing.Point(356, 191);
             this.textBoxOcjena.Name = "textBoxOcjena";
-            this.textBoxOcjena.Size = new System.Drawing.Size(206, 27);
+            this.textBoxOcjena.Size = new System.Drawing.Size(206, 31);
             this.textBoxOcjena.TabIndex = 32;
             // 
             // labelOcjena
             // 
             this.labelOcjena.AutoSize = true;
             this.labelOcjena.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelOcjena.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOcjena.ForeColor = System.Drawing.Color.White;
-            this.labelOcjena.Location = new System.Drawing.Point(177, 176);
+            this.labelOcjena.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelOcjena.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelOcjena.Location = new System.Drawing.Point(183, 197);
             this.labelOcjena.Name = "labelOcjena";
-            this.labelOcjena.Size = new System.Drawing.Size(79, 23);
+            this.labelOcjena.Size = new System.Drawing.Size(88, 25);
             this.labelOcjena.TabIndex = 31;
             this.labelOcjena.Text = "Ocjena";
             // 
@@ -105,7 +105,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewFilmovi.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewFilmovi.Location = new System.Drawing.Point(62, 287);
+            this.dataGridViewFilmovi.Location = new System.Drawing.Point(68, 306);
             this.dataGridViewFilmovi.Name = "dataGridViewFilmovi";
             this.dataGridViewFilmovi.ReadOnly = true;
             this.dataGridViewFilmovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -117,7 +117,7 @@
             // 
             this.buttonIzbrisi.BackColor = System.Drawing.Color.White;
             this.buttonIzbrisi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonIzbrisi.Location = new System.Drawing.Point(596, 220);
+            this.buttonIzbrisi.Location = new System.Drawing.Point(602, 248);
             this.buttonIzbrisi.Name = "buttonIzbrisi";
             this.buttonIzbrisi.Size = new System.Drawing.Size(126, 36);
             this.buttonIzbrisi.TabIndex = 29;
@@ -129,7 +129,7 @@
             // 
             this.buttonPrikazi.BackColor = System.Drawing.Color.White;
             this.buttonPrikazi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPrikazi.Location = new System.Drawing.Point(419, 220);
+            this.buttonPrikazi.Location = new System.Drawing.Point(425, 248);
             this.buttonPrikazi.Name = "buttonPrikazi";
             this.buttonPrikazi.Size = new System.Drawing.Size(126, 36);
             this.buttonPrikazi.TabIndex = 28;
@@ -141,7 +141,7 @@
             // 
             this.buttonIzmjeni.BackColor = System.Drawing.Color.White;
             this.buttonIzmjeni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonIzmjeni.Location = new System.Drawing.Point(242, 220);
+            this.buttonIzmjeni.Location = new System.Drawing.Point(248, 248);
             this.buttonIzmjeni.Name = "buttonIzmjeni";
             this.buttonIzmjeni.Size = new System.Drawing.Size(126, 36);
             this.buttonIzmjeni.TabIndex = 27;
@@ -153,7 +153,7 @@
             // 
             this.buttonKreiraj.BackColor = System.Drawing.Color.White;
             this.buttonKreiraj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonKreiraj.Location = new System.Drawing.Point(62, 220);
+            this.buttonKreiraj.Location = new System.Drawing.Point(68, 248);
             this.buttonKreiraj.Name = "buttonKreiraj";
             this.buttonKreiraj.Size = new System.Drawing.Size(126, 36);
             this.buttonKreiraj.TabIndex = 26;
@@ -163,61 +163,61 @@
             // 
             // textBoxID
             // 
-            this.textBoxID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxID.Location = new System.Drawing.Point(350, 23);
+            this.textBoxID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxID.Location = new System.Drawing.Point(356, 46);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(206, 27);
+            this.textBoxID.Size = new System.Drawing.Size(206, 31);
             this.textBoxID.TabIndex = 25;
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
             this.labelID.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.ForeColor = System.Drawing.Color.White;
-            this.labelID.Location = new System.Drawing.Point(177, 27);
+            this.labelID.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelID.Location = new System.Drawing.Point(183, 52);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(28, 23);
+            this.labelID.Size = new System.Drawing.Size(33, 25);
             this.labelID.TabIndex = 24;
             this.labelID.Text = "ID";
             // 
             // textBoxGodinaIzlaska
             // 
-            this.textBoxGodinaIzlaska.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxGodinaIzlaska.Location = new System.Drawing.Point(350, 126);
+            this.textBoxGodinaIzlaska.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxGodinaIzlaska.Location = new System.Drawing.Point(356, 143);
             this.textBoxGodinaIzlaska.Name = "textBoxGodinaIzlaska";
-            this.textBoxGodinaIzlaska.Size = new System.Drawing.Size(206, 27);
+            this.textBoxGodinaIzlaska.Size = new System.Drawing.Size(206, 31);
             this.textBoxGodinaIzlaska.TabIndex = 23;
             // 
             // labelGodinaIzlaska
             // 
             this.labelGodinaIzlaska.AutoSize = true;
             this.labelGodinaIzlaska.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelGodinaIzlaska.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGodinaIzlaska.ForeColor = System.Drawing.Color.White;
-            this.labelGodinaIzlaska.Location = new System.Drawing.Point(177, 130);
+            this.labelGodinaIzlaska.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelGodinaIzlaska.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelGodinaIzlaska.Location = new System.Drawing.Point(183, 149);
             this.labelGodinaIzlaska.Name = "labelGodinaIzlaska";
-            this.labelGodinaIzlaska.Size = new System.Drawing.Size(149, 23);
+            this.labelGodinaIzlaska.Size = new System.Drawing.Size(164, 25);
             this.labelGodinaIzlaska.TabIndex = 22;
-            this.labelGodinaIzlaska.Text = "Godina Izlaska";
+            this.labelGodinaIzlaska.Text = "Godina izlaska";
             // 
             // textBoxNaziv
             // 
-            this.textBoxNaziv.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxNaziv.Location = new System.Drawing.Point(350, 77);
+            this.textBoxNaziv.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxNaziv.Location = new System.Drawing.Point(356, 94);
             this.textBoxNaziv.Name = "textBoxNaziv";
-            this.textBoxNaziv.Size = new System.Drawing.Size(206, 27);
+            this.textBoxNaziv.Size = new System.Drawing.Size(206, 31);
             this.textBoxNaziv.TabIndex = 21;
             // 
             // labelNaziv
             // 
             this.labelNaziv.AutoSize = true;
             this.labelNaziv.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelNaziv.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNaziv.ForeColor = System.Drawing.Color.White;
-            this.labelNaziv.Location = new System.Drawing.Point(177, 81);
+            this.labelNaziv.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNaziv.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelNaziv.Location = new System.Drawing.Point(183, 100);
             this.labelNaziv.Name = "labelNaziv";
-            this.labelNaziv.Size = new System.Drawing.Size(62, 23);
+            this.labelNaziv.Size = new System.Drawing.Size(69, 25);
             this.labelNaziv.TabIndex = 20;
             this.labelNaziv.Text = "Naziv";
             // 

@@ -41,7 +41,7 @@
             this.labelIme.AutoSize = true;
             this.labelIme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIme.ForeColor = System.Drawing.Color.White;
-            this.labelIme.Location = new System.Drawing.Point(212, 106);
+            this.labelIme.Location = new System.Drawing.Point(216, 123);
             this.labelIme.Name = "labelIme";
             this.labelIme.Size = new System.Drawing.Size(144, 23);
             this.labelIme.TabIndex = 0;
@@ -50,7 +50,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxUsername.Location = new System.Drawing.Point(373, 106);
+            this.textBoxUsername.Location = new System.Drawing.Point(377, 123);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(206, 27);
             this.textBoxUsername.TabIndex = 1;
@@ -58,7 +58,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxPassword.Location = new System.Drawing.Point(373, 155);
+            this.textBoxPassword.Location = new System.Drawing.Point(377, 172);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(206, 27);
@@ -69,7 +69,7 @@
             this.labelLozinka.AutoSize = true;
             this.labelLozinka.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLozinka.ForeColor = System.Drawing.Color.White;
-            this.labelLozinka.Location = new System.Drawing.Point(212, 155);
+            this.labelLozinka.Location = new System.Drawing.Point(216, 172);
             this.labelLozinka.Name = "labelLozinka";
             this.labelLozinka.Size = new System.Drawing.Size(79, 23);
             this.labelLozinka.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(319, 231);
+            this.button1.Location = new System.Drawing.Point(323, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 40);
             this.button1.TabIndex = 7;

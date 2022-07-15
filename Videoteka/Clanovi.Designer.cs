@@ -51,61 +51,61 @@
             // 
             // textBoxPrezime
             // 
-            this.textBoxPrezime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxPrezime.Location = new System.Drawing.Point(353, 137);
+            this.textBoxPrezime.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxPrezime.Location = new System.Drawing.Point(353, 132);
             this.textBoxPrezime.Name = "textBoxPrezime";
-            this.textBoxPrezime.Size = new System.Drawing.Size(206, 27);
+            this.textBoxPrezime.Size = new System.Drawing.Size(206, 31);
             this.textBoxPrezime.TabIndex = 7;
             // 
             // labelPrezime
             // 
             this.labelPrezime.AutoSize = true;
             this.labelPrezime.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelPrezime.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrezime.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelPrezime.ForeColor = System.Drawing.Color.White;
-            this.labelPrezime.Location = new System.Drawing.Point(229, 141);
+            this.labelPrezime.Location = new System.Drawing.Point(232, 138);
             this.labelPrezime.Name = "labelPrezime";
-            this.labelPrezime.Size = new System.Drawing.Size(83, 23);
+            this.labelPrezime.Size = new System.Drawing.Size(92, 25);
             this.labelPrezime.TabIndex = 6;
             this.labelPrezime.Text = "Prezime";
             // 
             // textBoxIme
             // 
-            this.textBoxIme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxIme.Location = new System.Drawing.Point(353, 88);
+            this.textBoxIme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxIme.Location = new System.Drawing.Point(353, 83);
             this.textBoxIme.Name = "textBoxIme";
-            this.textBoxIme.Size = new System.Drawing.Size(206, 27);
+            this.textBoxIme.Size = new System.Drawing.Size(206, 31);
             this.textBoxIme.TabIndex = 5;
             // 
             // labelIme
             // 
             this.labelIme.AutoSize = true;
             this.labelIme.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelIme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIme.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelIme.ForeColor = System.Drawing.Color.White;
-            this.labelIme.Location = new System.Drawing.Point(229, 92);
+            this.labelIme.Location = new System.Drawing.Point(232, 89);
             this.labelIme.Name = "labelIme";
-            this.labelIme.Size = new System.Drawing.Size(45, 23);
+            this.labelIme.Size = new System.Drawing.Size(51, 25);
             this.labelIme.TabIndex = 4;
             this.labelIme.Text = "Ime";
             // 
             // textBoxID
             // 
-            this.textBoxID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxID.Location = new System.Drawing.Point(353, 34);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(206, 27);
+            this.textBoxID.Size = new System.Drawing.Size(206, 31);
             this.textBoxID.TabIndex = 9;
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
             this.labelID.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelID.ForeColor = System.Drawing.Color.White;
-            this.labelID.Location = new System.Drawing.Point(229, 38);
+            this.labelID.Location = new System.Drawing.Point(232, 40);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(28, 23);
+            this.labelID.Size = new System.Drawing.Size(33, 25);
             this.labelID.TabIndex = 8;
             this.labelID.Text = "ID";
             // 
@@ -180,7 +180,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewClanovi.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewClanovi.Location = new System.Drawing.Point(65, 298);
+            this.dataGridViewClanovi.Location = new System.Drawing.Point(65, 288);
             this.dataGridViewClanovi.Name = "dataGridViewClanovi";
             this.dataGridViewClanovi.ReadOnly = true;
             this.dataGridViewClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -190,21 +190,21 @@
             // 
             // textBoxOIB
             // 
-            this.textBoxOIB.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxOIB.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxOIB.Location = new System.Drawing.Point(353, 183);
             this.textBoxOIB.Name = "textBoxOIB";
-            this.textBoxOIB.Size = new System.Drawing.Size(206, 27);
+            this.textBoxOIB.Size = new System.Drawing.Size(206, 31);
             this.textBoxOIB.TabIndex = 18;
             // 
             // labelOIB
             // 
             this.labelOIB.AutoSize = true;
             this.labelOIB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelOIB.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOIB.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelOIB.ForeColor = System.Drawing.Color.White;
-            this.labelOIB.Location = new System.Drawing.Point(229, 187);
+            this.labelOIB.Location = new System.Drawing.Point(232, 189);
             this.labelOIB.Name = "labelOIB";
-            this.labelOIB.Size = new System.Drawing.Size(42, 23);
+            this.labelOIB.Size = new System.Drawing.Size(48, 25);
             this.labelOIB.TabIndex = 17;
             this.labelOIB.Text = "OIB";
             // 
@@ -212,7 +212,7 @@
             // 
             this.pictureBoxNazad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNazad.BackgroundImage")));
             this.pictureBoxNazad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxNazad.Location = new System.Drawing.Point(370, 504);
+            this.pictureBoxNazad.Location = new System.Drawing.Point(368, 504);
             this.pictureBoxNazad.Name = "pictureBoxNazad";
             this.pictureBoxNazad.Size = new System.Drawing.Size(60, 45);
             this.pictureBoxNazad.TabIndex = 19;

@@ -50,6 +50,7 @@ namespace Videoteka
             labelNaziv.BackColor = System.Drawing.Color.Transparent;
             labelGodinaIzlaska.BackColor = System.Drawing.Color.Transparent;           
             labelOcjena.BackColor = System.Drawing.Color.Transparent;
+            
 
             pictureBoxNazad.BackColor = System.Drawing.Color.Transparent;
         }
