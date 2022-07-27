@@ -27,19 +27,25 @@ namespace Videoteka
             labelOIB.BackColor = System.Drawing.Color.Transparent;
 
             pictureBoxNazad.BackColor = System.Drawing.Color.Transparent;
+
+            
         }
 
         // Prikazi
         private void buttonPrikazi_Click(object sender, EventArgs e)
-        {
+        {         
             if (String.IsNullOrEmpty(textBoxID.Text))
             {
-                IspisClanova ispisClanova = new IspisClanova(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text, this.dataGridViewClanovi);
+                Clan clan = new Clan(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                dataGridViewClanovi.DataSource = clan.Ispis();
             }
             else
             {
-                IspisClanova ispisClanova = new IspisClanova(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text, this.dataGridViewClanovi);
+                Clan clan = new Clan(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                dataGridViewClanovi.DataSource = clan.Ispis();
             }
+
+            
         }
 
         // Kreiraj
@@ -59,8 +65,8 @@ namespace Videoteka
                 }
                 else
                 {
-                    KreirajNovogClana kreirajNovogClana = new KreirajNovogClana(textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
-
+                    Clan clan = new Clan(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                    clan.Kreiraj();
                     textBoxID.Text = "";
                     textBoxIme.Text = "";
                     textBoxPrezime.Text = "";
@@ -71,7 +77,7 @@ namespace Videoteka
 
         private void dataGridViewClanovi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex != -1)
+            if (e.RowIndex != -1)
             {
                 DataGridViewRow dataGridViewRow = dataGridViewClanovi.Rows[e.RowIndex];
 
@@ -91,7 +97,8 @@ namespace Videoteka
             }
             else if(String.IsNullOrEmpty(textBoxID.Text) == false)
             {
-                IzbrisiClana izbrisiClana = new IzbrisiClana(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                Clan clan = new Clan(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                clan.Izbrisi();
                 textBoxID.Text = "";
                 textBoxIme.Text = "";
                 textBoxPrezime.Text = "";
@@ -99,7 +106,8 @@ namespace Videoteka
             }
             else if (String.IsNullOrEmpty(textBoxID.Text) && String.IsNullOrEmpty(textBoxOIB.Text) == false)
             {
-                IzbrisiClana izbrisiClana = new IzbrisiClana(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                Clan clan = new Clan(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                clan.Izbrisi();
                 textBoxID.Text = "";
                 textBoxIme.Text = "";
                 textBoxPrezime.Text = "";
@@ -122,7 +130,8 @@ namespace Videoteka
             }
             else
             {
-                IzmjeniClana izmjeniPodatke = new IzmjeniClana(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                Clan clan = new Clan(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
+                clan.Izmijeni();
                 textBoxID.Text = "";
                 textBoxIme.Text = "";
                 textBoxPrezime.Text = "";
