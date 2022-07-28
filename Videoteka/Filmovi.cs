@@ -76,6 +76,7 @@ namespace Videoteka
             pictureBoxNazad.Cursor = Cursors.Default;
         }
         
+        // IZBRISI FILM
         private void buttonIzbrisi_Click(object sender, EventArgs e)
         {
             IzbrisiFilm izbrisiFilm = new IzbrisiFilm(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena);
@@ -88,6 +89,7 @@ namespace Videoteka
             buttonPrikazi_Click(sender, e);
         }
 
+        // IZMIJENI FILM
         private void buttonIzmjeni_Click(object sender, EventArgs e)
         {
             AzurirajFilm azurirajFilm = new AzurirajFilm(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena);

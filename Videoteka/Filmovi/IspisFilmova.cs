@@ -13,7 +13,7 @@ namespace Videoteka
     {
         Film film = new Film();
 
-        public DataSet getDaTaSet(TextBox textBoxId, TextBox textBoxNaziv, TextBox textBoxGodinaIzlaska, TextBox textBoxOcjena/* DataGridView dataGridViewFIlm*/)
+        public DataSet getDaTaSet(TextBox textBoxId, TextBox textBoxNaziv, TextBox textBoxGodinaIzlaska, TextBox textBoxOcjena)
         {
             if (String.IsNullOrEmpty(textBoxId.Text))
             {
@@ -196,24 +196,16 @@ namespace Videoteka
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(dataSet);
-
-                //dataGridViewFIlm.DataSource = table;
-
+                                
                 connection.Close();
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
-            }
-
-
+            }            
 
             return dataSet;
-
-
-
-
         }
     }
 }

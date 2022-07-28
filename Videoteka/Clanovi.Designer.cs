@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clanovi));
@@ -45,8 +46,14 @@
             this.textBoxOIB = new System.Windows.Forms.TextBox();
             this.labelOIB = new System.Windows.Forms.Label();
             this.pictureBoxNazad = new System.Windows.Forms.PictureBox();
+            this.ClanID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OIB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceClan = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClanovi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNazad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceClan)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPrezime
@@ -161,6 +168,7 @@
             // 
             this.dataGridViewClanovi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewClanovi.AutoGenerateColumns = false;
             this.dataGridViewClanovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewClanovi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -172,6 +180,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewClanovi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewClanovi.ColumnHeadersHeight = 30;
+            this.dataGridViewClanovi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClanID,
+            this.Ime,
+            this.Prezime,
+            this.OIB});
+            this.dataGridViewClanovi.DataSource = this.bindingSourceClan;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -182,11 +196,10 @@
             this.dataGridViewClanovi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewClanovi.Location = new System.Drawing.Point(65, 288);
             this.dataGridViewClanovi.Name = "dataGridViewClanovi";
-            this.dataGridViewClanovi.ReadOnly = true;
             this.dataGridViewClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewClanovi.Size = new System.Drawing.Size(660, 192);
             this.dataGridViewClanovi.TabIndex = 16;
-            this.dataGridViewClanovi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClanovi_CellClick);
+            this.dataGridViewClanovi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClanovi_CellContentClick);
             // 
             // textBoxOIB
             // 
@@ -221,6 +234,38 @@
             this.pictureBoxNazad.MouseLeave += new System.EventHandler(this.pictureBoxNazad_MouseLeave);
             this.pictureBoxNazad.MouseHover += new System.EventHandler(this.pictureBoxNazad_MouseHover);
             // 
+            // ClanID
+            // 
+            this.ClanID.DataPropertyName = "ClanID";
+            this.ClanID.HeaderText = "ID";
+            this.ClanID.Name = "ClanID";
+            this.ClanID.ReadOnly = true;
+            // 
+            // Ime
+            // 
+            this.Ime.DataPropertyName = "Ime";
+            this.Ime.HeaderText = "Ime";
+            this.Ime.Name = "Ime";
+            this.Ime.ReadOnly = true;
+            // 
+            // Prezime
+            // 
+            this.Prezime.DataPropertyName = "Prezime";
+            this.Prezime.HeaderText = "Prezime";
+            this.Prezime.Name = "Prezime";
+            this.Prezime.ReadOnly = true;
+            // 
+            // OIB
+            // 
+            this.OIB.DataPropertyName = "OIB";
+            this.OIB.HeaderText = "OIB";
+            this.OIB.Name = "OIB";
+            this.OIB.ReadOnly = true;
+            // 
+            // bindingSourceClan
+            // 
+            this.bindingSourceClan.DataSource = typeof(Videoteka.Osoba);
+            // 
             // Clanovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +294,7 @@
             this.Load += new System.EventHandler(this.Clanovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClanovi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNazad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceClan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +315,10 @@
         private System.Windows.Forms.TextBox textBoxOIB;
         private System.Windows.Forms.Label labelOIB;
         private System.Windows.Forms.PictureBox pictureBoxNazad;
+        private System.Windows.Forms.BindingSource bindingSourceClan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClanID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OIB;
     }
 }

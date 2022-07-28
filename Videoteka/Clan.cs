@@ -22,17 +22,14 @@ namespace Videoteka
             osoba.setOIB(oib);
         }
 
-        public BindingSource Ispis()
+        public DataSet Ispis()
         {
-            BindingSource bindingSource = new BindingSource();
-
+            DataSet dataSet = new DataSet();
             try
             {
                 SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=Videoteka;Integrated Security=True");
                 connection.Open();
-
-                //DataTable table = new DataTable();
-                DataSet dataSet = new DataSet();
+               
                 SqlDataAdapter adapter = new SqlDataAdapter();
 
                 SqlCommand cmd = new SqlCommand();
@@ -183,8 +180,7 @@ namespace Videoteka
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(dataSet);
-
-                bindingSource.DataSource = dataSet.Tables[0];
+                              
 
                 connection.Close();
 
@@ -196,7 +192,7 @@ namespace Videoteka
             }
 
 
-            return bindingSource;
+            return dataSet;
 
         }
 

@@ -37,12 +37,12 @@ namespace Videoteka
             if (String.IsNullOrEmpty(textBoxID.Text))
             {
                 Clan clan = new Clan(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
-                dataGridViewClanovi.DataSource = clan.Ispis();
+                bindingSourceClan.DataSource = clan.Ispis().Tables[0];
             }
             else
             {
                 Clan clan = new Clan(int.Parse(textBoxID.Text), textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
-                dataGridViewClanovi.DataSource = clan.Ispis();
+                bindingSourceClan.DataSource = clan.Ispis().Tables[0];
             }
 
             
@@ -67,26 +67,16 @@ namespace Videoteka
                 {
                     Clan clan = new Clan(0, textBoxIme.Text, textBoxPrezime.Text, textBoxOIB.Text);
                     clan.Kreiraj();
+
                     textBoxID.Text = "";
                     textBoxIme.Text = "";
                     textBoxPrezime.Text = "";
                     textBoxOIB.Text = "";
-                }                                       
+                }
+                buttonPrikazi_Click(sender, e);
             }   
         }
-
-        private void dataGridViewClanovi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                DataGridViewRow dataGridViewRow = dataGridViewClanovi.Rows[e.RowIndex];
-
-                textBoxID.Text = dataGridViewRow.Cells[0].Value.ToString();
-                textBoxIme.Text = dataGridViewRow.Cells[1].Value.ToString();
-                textBoxPrezime.Text = dataGridViewRow.Cells[2].Value.ToString();
-                textBoxOIB.Text = dataGridViewRow.Cells[3].Value.ToString();
-            }
-        }
+             
 
         // Izbrisi
         private void buttonIzbrisi_Click(object sender, EventArgs e)
@@ -156,6 +146,14 @@ namespace Videoteka
         private void pictureBoxNazad_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxNazad.Cursor = Cursors.Default;
+        }
+
+        private void dataGridViewClanovi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxID.Text = ((DataRowView)this.bindingSourceClan.Current).Row["ClanID"].ToString();
+            textBoxIme.Text = ((DataRowView)this.bindingSourceClan.Current).Row["Ime"].ToString();
+            textBoxPrezime.Text = ((DataRowView)this.bindingSourceClan.Current).Row["Prezime"].ToString();
+            textBoxOIB.Text = ((DataRowView)this.bindingSourceClan.Current).Row["OIB"].ToString();
         }
     }
 }
