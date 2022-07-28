@@ -20,6 +20,7 @@ namespace Videoteka
 
             SqlCommand cmd = new SqlCommand();
 
+
             try
             {
                 if (String.IsNullOrEmpty(textBoxID.Text))
@@ -42,19 +43,19 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                             
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim ID-om ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -74,18 +75,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -105,18 +106,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -136,18 +137,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -168,18 +169,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -200,18 +201,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -232,18 +233,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 
@@ -265,18 +266,18 @@ namespace Videoteka
 
                         if (result == DialogResult.Yes)
                         {
-                            cmd = new SqlCommand("DELETE FROM Film WHERE Film.FilmID = @id", connection);
+                            cmd = new SqlCommand("DELETE FROM Videoteka_Film WHERE Videoteka_Film.FilmID = @id", connection);
                             cmd.Parameters.AddWithValue("@id", int.Parse(textBoxID.Text));
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Film obrisan.");
+                            MessageBox.Show("Film uklonjen iz videoteke.");
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Film s tim podacima ne postoji!");
+                        MessageBox.Show("Film s tim podacima ne postoji u videoteci!");
                     }
                 }
 

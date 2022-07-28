@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,10 @@ namespace Videoteka
         // PRIKAZI FILM
         private void buttonPrikazi_Click(object sender, EventArgs e)
         {
-            IspisFilmova ispisFilmova = new IspisFilmova(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena, dataGridViewFilmovi);            
+            IspisFilmova ispisFilmova = new IspisFilmova();
+
+            bindingSourceFilm.DataSource = ispisFilmova.getDaTaSet(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena).Tables[0];
+                              
         }
 
         // KREIRAJ FILM
@@ -45,14 +49,14 @@ namespace Videoteka
         }
 
         private void Filmovi_Load(object sender, EventArgs e)
-        {
+        {            
             labelID.BackColor = System.Drawing.Color.Transparent;
             labelNaziv.BackColor = System.Drawing.Color.Transparent;
             labelGodinaIzlaska.BackColor = System.Drawing.Color.Transparent;           
             labelOcjena.BackColor = System.Drawing.Color.Transparent;
-            
-
             pictureBoxNazad.BackColor = System.Drawing.Color.Transparent;
+
+            
         }
 
         private void pictureBoxNazad_Click(object sender, EventArgs e)
@@ -71,24 +75,11 @@ namespace Videoteka
         {
             pictureBoxNazad.Cursor = Cursors.Default;
         }
-
-        private void dataGridViewFilmovi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                DataGridViewRow dataGridViewRow = dataGridViewFilmovi.Rows[e.RowIndex];
-
-                textBoxID.Text = dataGridViewRow.Cells[0].Value.ToString();
-                textBoxNaziv.Text = dataGridViewRow.Cells[1].Value.ToString();
-                textBoxGodinaIzlaska.Text = dataGridViewRow.Cells[2].Value.ToString();
-                textBoxOcjena.Text = dataGridViewRow.Cells[3].Value.ToString();
-            }
-        }
-
+        
         private void buttonIzbrisi_Click(object sender, EventArgs e)
         {
             IzbrisiFilm izbrisiFilm = new IzbrisiFilm(textBoxID, textBoxNaziv, textBoxGodinaIzlaska, textBoxOcjena);
-
+                        
             textBoxID.Text = "";
             textBoxNaziv.Text = "";
             textBoxGodinaIzlaska.Text = "";
@@ -107,6 +98,14 @@ namespace Videoteka
             textBoxOcjena.Text = "";
 
             buttonPrikazi_Click(sender, e);
+        }
+
+        private void dataGridViewFilmovi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxID.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["FilmID"].ToString();
+            textBoxNaziv.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["Naziv"].ToString();
+            textBoxGodinaIzlaska.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["Godina_Izlaska"].ToString();
+            textBoxOcjena.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["Ocjena"].ToString();
         }
     }
 }

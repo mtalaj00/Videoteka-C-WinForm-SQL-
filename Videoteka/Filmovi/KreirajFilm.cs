@@ -56,6 +56,24 @@ namespace Videoteka
                         cmd.Parameters.AddWithValue("@ocjena", film.getOcjena());
 
                         cmd.ExecuteNonQuery();
+                        
+                        cmd = new SqlCommand("SELECT Film.FilmID FROM Film WHERE Film.Naziv = @naziv AND Film.GodinaIzdanja = @godina AND Film.Ocjena = @ocjena", connection);
+                        cmd.Parameters.AddWithValue("@naziv", film.getNaziv());
+                        cmd.Parameters.AddWithValue("@godina", film.getGodinaIzlaska());
+                        cmd.Parameters.AddWithValue("@ocjena", film.getOcjena());
+
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        dr.Read();
+
+                        int filmID = dr.GetInt32(0);
+
+                        dr.Close();
+
+                        cmd = new SqlCommand("INSERT INTO Videoteka_Film VALUES (1, @filmID)", connection);
+                        cmd.Parameters.AddWithValue("@filmID", filmID);
+                       
+
+                        cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Uspješno ste dodali novi film.");
                     }
