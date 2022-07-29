@@ -104,10 +104,16 @@ namespace Videoteka
 
         private void dataGridViewFilmovi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBoxID.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["FilmID"].ToString();
-            textBoxNaziv.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["Naziv"].ToString();
-            textBoxGodinaIzlaska.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["Godina_Izlaska"].ToString();
-            textBoxOcjena.Text = ((DataRowView)this.bindingSourceFilm.Current).Row["Ocjena"].ToString();
+            textBoxID.DataBindings.Add("Text", bindingSourceFilm, "FilmID");
+            textBoxNaziv.DataBindings.Add("Text", bindingSourceFilm, "Naziv");
+            textBoxGodinaIzlaska.DataBindings.Add("Text", bindingSourceFilm, "Godina_Izlaska");
+            textBoxOcjena.DataBindings.Add("Text", bindingSourceFilm, "Ocjena");
+
+            textBoxID.DataBindings.Clear();
+            textBoxNaziv.DataBindings.Clear();
+            textBoxGodinaIzlaska.DataBindings.Clear();
+            textBoxOcjena.DataBindings.Clear();
+
         }
     }
 }
